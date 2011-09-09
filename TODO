@@ -1,0 +1,53 @@
+
+- Necesitamos desglosar cada una de estas opciones documentando del man de
+  album que hacen. Y luego implementar esa opcion documentada.
+
+Opciones originales de album a portar a freealbum:
+
+Usage:  album [-d] [--scale_opts .. --] [options] <dir>
+  Makes a photo album
+
+  All boolean options can be turned off with '-no_<option>'
+  (Some are default on, defaults shown in [brackets])
+
+  -h                 Show usage
+  -more              To show more options.
+  -lang <lang>       Specify language(s)
+  -conf <file>       Read a .conf file
+  -version           Display program version info
+  -mv                Move imgs across albums: see 'album -plugin_info utils/mv'
+
+Album Options:
+  -medium <geom>     Generate medium size images
+  -slideshow         Slideshow capabilities (only with some themes) [OFF]
+  -embed             Use image pages for non-picture image pages [ON]
+  -clean             Remove unused thumbnails [OFF]
+  -caption_edit      Add comment tags so that caption_edit.cgi will work [OFF]
+  --exif <fmt>       Append exif info to captions.  Use %key 0n fmt string
+      Example:  -exif "<br>Camera: %Camera model%"
+      If any %keys% are not found by jhead, nothing is appended.
+  --add <dir>        Add a new directory to the album it's been placed in
+  -burn              Setup an album to burn to CD
+      Implies '-index index.html' and '-no_theme_url' [OFF]
+
+Thumbnail Options:
+  -geometry <X>x<Y>  Size of thumbnail [133x133]
+  -type              Thumbnail type (gif, jpg, tiff,...) [jpg]
+  -medium_type       Medium type (default is same type as full image)
+  -crop              Crop the image to fit thumbnail size
+      otherwise aspect will be maintained [OFF]
+  -dir               Thumbnail directory [tn]
+  -animated_gifs     Take first frame of animated gifs (only some systems) [OFF]
+
+Plugin and Theme Options:
+  --data_path        Path for themes, plugins, language files, etc...
+       [/etc/album /usr/share/album /home/rafa/.album]
+  -plugin <plugin>   Load a plugin
+  -plugin_usage <plugin> Show usage for a plugin
+  -theme <dir>       Specify a theme directory
+
+Dashdash options (--opt) can be specified two ways:
+  With one argument:       '-exif hi -exif there'
+  With mult. arguments:    '--exif hi there --'
+
+
