@@ -34,3 +34,6 @@ echo '
 </body>
 </html>
 ' >> $TEMP
+
+cp $TEMP index.html
+rm $TEMP
