@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script creates a index.html web page
+# Another script will run this one in every directory found
+
 TEMP=/tmp/tmp.$$$$
 
 # Write Document Type Declaration and Header
